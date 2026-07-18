@@ -1,15 +1,21 @@
 public class Persona{
-	String fecha_nacimiento;
+	String equipaje;
 	String nombre;
-	Persona(String fecha, String nme){
-		fecha_nacimiento=fecha;
+	Maleta c;
+	Persona(String equipaje, String nme){
+		this.equipaje=equipaje;
 		nombre=nme;
 	}
 
-	public void respirar(){
-		System.out.println("La persona "+nombre+" nacida el dia "+fecha_nacimiento+" esta respirando");
+	public void viaje(){
+		System.out.println("La persona "+nombre+" tiene"+equipaje+" maletas como equipaje");
 	}
-	public void comer(){
-		System.out.println("La persona esta comiendo");
+
+	public void cantidad(int x){
+		if (x==1){
+			c = new Maleta(1);
+		}else{
+			c = new Maleta(2);
+		}
 	}
 }
